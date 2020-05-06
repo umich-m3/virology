@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="../js/jquery-1.5.min.js" type="text/javascript"></script>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<title>Q1</title>
+<script language="javascript">
+function openNewWindow(url,props) {
+		//open a cdc guidline in a new window that is custom sized for each guidelline
+		var newWin=open(url, 'theWin', props);
+	};
+var itemScore = 0
+function MM_changeProp(objId,x,theProp,theValue) { //v9.0
+  var obj = null; with (document){ if (getElementById)
+  obj = getElementById(objId); }
+  if (obj){
+    if (theValue == true || theValue == false)
+      eval("obj.style."+theProp+"="+theValue);
+    else eval("obj.style."+theProp+"='"+theValue+"'");
+  }
+}
+</script>
+<style type="text/css">
+a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #FFF;
+}
+a:hover {
+	text-decoration: underline;
+	color: #FFF;
+}
+a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+</style>
+</head>
+
+<body>
+<div id="tutorialcontainerscreen">
+  <div id="tutorialbannerscreen">Virology Introduction: Self-assessment</div>
+  
+   <div id="ans" class="content"></div>
+   
+  </li>
+</ul>
+  
+<form>
+  <div id="tutorialcontentscreen"><br /><span class="leadin">All viruses require which of the following to replicate?</span>
+  </p><br/>
+
+  <p>
+    <label>
+      <input name="RadioGroup1" type="radio" value="no" id="RadioGroup1_0" />
+      Lipid bilayer</label>
+    <br />
+    <label>
+      <input type="radio" name="RadioGroup1" value="yes" id="RadioGroup1_1" />
+      Living cell</label>
+    <br />
+    <label>
+      <input type="radio" name="RadioGroup1" value="no" id="RadioGroup1_2" />
+      DNA polymerase</label>
+    <br />
+  </p>
+    
+    <p></p>
+
+    <p align="center" class="content">
+     <input name="Submit_answer" type="button" class="content" onclick="MM_changeProp('tutorialfeedbackscreen','','visibility','visible','DIV')"  value="Submit answer"  />
+    </p>
+    <p></p>
+  </div>
+</form>
+
+
+  <div id="tutorialfeedbackscreen"><p class="content">The correct answer is "Living cell." </p>
+  <p class="content" align="center"><img src="../documents/virology_slide_images/Slide02.jpg"></p></div>
+  
+  
+<div id="tutorialfooterscreen">  <span class="seperator">|</span> <a href="question2.html">Next</a> <span class="seperator">|</span> Screen 1 of 5&nbsp;</div></div></div>
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		//my code goes here
+		
+		$('submit_answer').click(function() {	
+			var feedbackText = $('#ans').html();
+			$('#tutorialfeedbackscreen').html(feedbackText);
+		});
+		
+		$('#nav li').hover(
+		function () {
+			//show its submenu
+			$('ul', this).slideDown(100);
+
+		}, 
+		function () {
+			//hide its submenu
+			$('ul', this).slideUp(100);			
+		}
+	);
+		
+	});
+	
+
+</script>
+</body>
+</html>
